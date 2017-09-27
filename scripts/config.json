@@ -1,11 +1,5 @@
 {
-    "telegram":{
-        "TOKEN": ""
-    },
-    "slideshow":
-    {
+        "TOKEN": "",
         "delay":30,
         "random":true
-    }
-
 }

@@ -7,14 +7,14 @@ import json
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-TOKEN = config['telegram.TOKEN']
+TOKEN = config['TOKEN']
 bot = telebot.TeleBot(TOKEN)
 
 
 @bot.message_handler(commands=['status'])
 def screenoff(message):
-		bot.reply_to(message, "photo delay: " + config["shideshow.delay"] )
-		bot.reply_to(message, "random: " + config["shideshow.random"] )
+		bot.reply_to(message, "photo delay: " + config["delay"] )
+		bot.reply_to(message, "random: " + config["random"] )
 
 
 @bot.message_handler(commands=['soff'])
