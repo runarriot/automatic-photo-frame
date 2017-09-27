@@ -13,14 +13,14 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['status'])
 def screenoff(message):
-		bot.reply_to(message, "photo delay: " + config["delay"] )
-		bot.reply_to(message, "random: " + config["random"] )
+                bot.reply_to(message, "photo delay: " + config["delay"] )
+                bot.reply_to(message, "random: " + config["random"] )
 
 
 @bot.message_handler(commands=['soff'])
 def screenoff(message):
-		subprocess.call(shlex.split('./test.sh param1 param2'))
-		bot.reply_to(message, "Screen is off")
+                subprocess.call(shlex.split('./test.sh param1 param2'))
+                bot.reply_to(message, "Screen is off")
 
 @bot.message_handler(commands=['on'])
 def screenon(message):
