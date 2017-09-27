@@ -1,5 +1,5 @@
 import telebot
-from ./../config/vars import *
+from config import *
 
 
 bot = telebot.TeleBot(TOKEN)
