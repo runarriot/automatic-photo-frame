@@ -1,9 +1,10 @@
+#!/usr/bin/python
 import telebot
-from config import *
+import config
 
+TOKEN = conig.TOKEN
 
-bot = telebot.TeleBot(config.TOKEN)
-bot.set_update_listener(listener) # register listener
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['soff'])
 def screenoff(message):
@@ -12,5 +13,11 @@ def screenoff(message):
 @bot.message_handler(commands=['on'])
 def screenon(message):
 	bot.reply_to(message, "Screen on")
+
+@bot.message_handler(func=lambda message: True)
+def echo_all(message):
+        bot.reply_to(message, message.text)
+
+
 
 bot.polling()
