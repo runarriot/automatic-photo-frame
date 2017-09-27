@@ -1,14 +1,26 @@
 #!/usr/bin/python
+import subprocess
+import shlex
 import telebot
-import cfg
+import json
 
-TOKEN = cfg.TOKEN
+with open('config.json', 'r') as f:
+    config = json.load(f)
 
+TOKEN = config['telegram.TOKEN']
 bot = telebot.TeleBot(TOKEN)
+
+
+@bot.message_handler(commands=['status'])
+def screenoff(message):
+		bot.reply_to(message, "photo delay: " + config["shideshow.delay"] )
+		bot.reply_to(message, "random: " + config["shideshow.random"] )
+
 
 @bot.message_handler(commands=['soff'])
 def screenoff(message):
-        bot.reply_to(message, "Screen off")
+		subprocess.call(shlex.split('./test.sh param1 param2'))
+		bot.reply_to(message, "Screen is off")
 
 @bot.message_handler(commands=['on'])
 def screenon(message):
