@@ -1,6 +1,5 @@
 import telebot
-
-TOKEN = '<token>'
+from ../config/vars import *
 
 
 bot = telebot.TeleBot(TOKEN)
