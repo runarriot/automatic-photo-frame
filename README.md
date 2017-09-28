@@ -15,9 +15,9 @@ config:
 working:
 - bot commands:
     - refreshdb
-        runs refreshdb script - it makes csv with filename createdate and keywords
-    - show <keyword>
-        greps db file for keyword and add all matching files to playlist and launch feh in fullscreen
+        - runs refreshdb script - it makes csv with filename createdate and keywords
+    - show 'keyword'
+        - greps db file for keyword and add all matching files to playlist and launch feh in fullscreen
 
 next todo:
 - startup script (.xprofile)
