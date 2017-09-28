@@ -1,0 +1,7 @@
+{
+        "TOKEN": "",
+	"dbfile": "data/db.txt",
+	"playlist": "data/playlist.txt",
+        "delay":30,
+        "random":true
+}

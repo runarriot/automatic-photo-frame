@@ -3,6 +3,13 @@ import subprocess
 import json
 import telebot
 
+import sys, os
+
+pathname = os.path.dirname(sys.argv[0])
+path = os.path.abspath(pathname) + '/'
+
+
+
 with open('config.json', 'r') as f:
     conf = json.load(f)
 
@@ -26,19 +33,19 @@ def status(message):
 #screen on
 @bot.message_handler(commands=['on'])
 def screenon(message):
-    env = {
-        "DISPLAY": ":0",
-    }
-    subprocess.Popen('../commands/screen.sh auto', env=env).wait()
+#    env = {
+#        "DISPLAY": ":0",
+#    }
+#    subprocess.Popen('../commands/screen.sh auto', env=env).wait()
     bot.reply_to(message, "Screen on")
 
 #screen off
 @bot.message_handler(commands=['off'])
 def screenoff(message):
-    env = {
-        "DISPLAY": ":0",
-    }
-    subprocess.Popen('../commands/screen.sh off', env=env).wait()
+#    env = {
+#        "DISPLAY": ":0",
+#    }
+#    subprocess.Popen('../commands/screen.sh off', env=env).wait()
     bot.reply_to(message, "Screen off")
 
 
@@ -47,12 +54,12 @@ def echo_all(message):
     command = get_command(message.text)
     params = get_params(message.text)
     if command == "show":
-        subprocess.Popen('../commands/slideshow.sh ').wait()
+	cmd = path + "slideshow.sh " + params
+        subprocess.Popen(cmd, env={"DISPLAY":":0"}, shell = True).wait()
     else:
         if command == "refreshdb":
-            cmd = "../commands/refreshdb.sh '" + params + ", " + conf["dbfile"]
-            subprocess.Popen(cmd).wait()
+            cmd = path + "refreshdb.sh " + path+"pics/" + " " + path + conf["dbfile"]
+            p = subprocess.Popen(cmd, shell = True, stdout=subprocess.PIPE).wait()
             bot.reply_to(message, "Db refresh done.")
-    bot.reply_to(message, "Command: " + command + "\nParams: " + params)
 
-bot.polling()
+bot.polling() 
