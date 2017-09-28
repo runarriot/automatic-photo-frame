@@ -1,5 +1,7 @@
 {
         "TOKEN": "",
+        "dbfile" : "photodb.txt",
+        "ssfile" : "slideshow.txt",
         "delay":30,
         "random":true
 }
