@@ -22,6 +22,7 @@ working:
         - send any photo to the frame via telegram messenger and it will be displayed on the frame
         
 current features video:
+
 [![automatic photo frame video](https://img.youtube.com/vi/R3AQWtuPeqg/0.jpg)](https://youtu.be/R3AQWtuPeqg)
 - left side is your phone anywhere with internet, 
 - right side is yours photo frame connected to wifi
