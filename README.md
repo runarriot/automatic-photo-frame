@@ -1,7 +1,7 @@
 # automatic-photo-frame
 Linux based automatic photo frame - controlled from any device on the net - auto on/off - auto playlists etc.
 
-...WIP...
+...::WIP::..
 
 requires:
 - linux (raspbian, ubuntu ... )
@@ -18,9 +18,13 @@ working:
         - runs refreshdb script - it makes csv with filename createdate and keywords
     - show 'keyword'
         - greps db file for keyword and add all matching files to playlist and launch feh in fullscreen
-
-current features video: - left side is your phone anywhere with internet, right side is yours photo frame connected to wifi
+    - display photo sent via telegram chat
+        - send any photo to the frame via telegram messenger and it will be displayed on the frame
+        
+current features video:
 [![automatic photo frame video](https://img.youtube.com/vi/R3AQWtuPeqg/0.jpg)](https://youtu.be/R3AQWtuPeqg)
+- left side is your phone anywhere with internet, 
+- right side is yours photo frame connected to wifi
 
 next todo:
 - startup script (.xprofile)
