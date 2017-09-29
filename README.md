@@ -19,6 +19,9 @@ working:
     - show 'keyword'
         - greps db file for keyword and add all matching files to playlist and launch feh in fullscreen
 
+current features video: - left side is your phone anywhere with internet, right side is yours photo frame connected to wifi
+[![automatic photo frame video](https://img.youtube.com/vi/R3AQWtuPeqg/0.jpg)](https://youtu.be/R3AQWtuPeqg)
+
 next todo:
 - startup script (.xprofile)
 - cron config for daily refreshdb & auto playlists generator
