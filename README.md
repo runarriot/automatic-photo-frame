@@ -6,14 +6,11 @@ Playlists can also be controlled - if you want, just type a message on your phon
 
 ...::WIP::..
 
-## Requirements
-- linux (raspbian, ubuntu ... )
-- exiftool
-- python & pip install pyTelegramBotAPI
-- feh & xserver - option is fbi (framebuffer image viewer - but X session has more features for future use.. )
+## Current features video
 
-## Configuration
-- edit config.json and change telegram bot token
+[![automatic photo frame video](https://img.youtube.com/vi/R3AQWtuPeqg/0.jpg)](https://youtu.be/R3AQWtuPeqg)
+- left side is your phone anywhere with internet, 
+- right side is yours photo frame connected to wifi
 
 ## What is working?
 - bot commands:
@@ -23,12 +20,6 @@ Playlists can also be controlled - if you want, just type a message on your phon
         - greps db file for keyword and add all matching files to playlist and launch feh in fullscreen
     - display photo sent via telegram chat
         - send any photo to the frame via telegram messenger and it will be displayed on the frame
-        
-## Current features video
-
-[![automatic photo frame video](https://img.youtube.com/vi/R3AQWtuPeqg/0.jpg)](https://youtu.be/R3AQWtuPeqg)
-- left side is your phone anywhere with internet, 
-- right side is yours photo frame connected to wifi
 
 ## To do next
 - startup script (.xprofile)
@@ -44,3 +35,11 @@ Playlists can also be controlled - if you want, just type a message on your phon
 - working schedule on/off in speciied time
 - option: enable screen only when somebody is at home - query wifi network if phone is connected.
 
+## Requirements
+- linux (raspbian, ubuntu ... )
+- exiftool
+- python & pip install pyTelegramBotAPI
+- feh & xserver - option is fbi (framebuffer image viewer - but X session has more features for future use.. )
+
+## Configuration
+- edit config.json and change telegram bot token
