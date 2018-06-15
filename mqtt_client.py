@@ -14,6 +14,8 @@ with open('config.json', 'r') as f:
 
 ADAFRUIT_IO_KEY      = conf["ADAFRUIT_IO_KEY"]
 ADAFRUIT_IO_USERNAME = conf["ADAFRUIT_IO_USERNAME"]                                    
+ADAFRUIT_FEED        = conf["ADAFRUIT_FEED"]
+enigma2_url = conf["enigma2_url"]
 
 pathname = os.path.dirname(sys.argv[0])
 path = os.path.abspath(pathname) + '/'
@@ -27,7 +29,7 @@ def get_params(text):
 
 def connected(client):
     print('Connected to Adafruit IO!  Listening for foto feed changes...')
-    client.subscribe('foto')
+    client.subscribe(ADAFRUIT_FEED)
 
 def disconnected(client):
     print('Disconnected from Adafruit IO!')
@@ -44,7 +46,7 @@ def message(client, feed_id, payload, retain):
         subprocess.Popen(cmd, shell=True).wait()
     if command == "tv":
         host = "http://192.168.1.180/"
-	url = host
+	url = enigma2_url
 	if params == "turn on":
            url += "api/powerstate?newstate=0"
 	if params == "turn off":
