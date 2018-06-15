@@ -7,8 +7,8 @@ import sys, os
 
 pathname = os.path.dirname(sys.argv[0])
 path = os.path.abspath(pathname) + '/'
-
-
+ 
+#test
 
 with open('config.json', 'r') as f:
     conf = json.load(f)
