@@ -3,5 +3,9 @@
 	"dbfile": "data/db.txt",
 	"playlist": "data/playlist.txt",
         "delay":30,
-        "random":true
+        "random":true,
+        "ADAFRUIT_IO_KEY" : "",
+        "ADAFRUIT_IO_USERNAME" : "",
+        "ADAFRUIT_FEED" : "",
+        "enigma2_url": ""
 }
